@@ -1,0 +1,44 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "CPU % (demo)",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
+      "targets": [
+        { "expr": "lab_cpu_usage_percent", "legendFormat": "cpu", "refId": "A" }
+      ],
+      "id": 1
+    },
+    {
+      "type": "timeseries",
+      "title": "Memory % (demo)",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
+      "targets": [
+        { "expr": "lab_memory_usage_percent", "legendFormat": "mem", "refId": "A" }
+      ],
+      "id": 2
+    },
+    {
+      "type": "stat",
+      "title": "Exporter up",
+      "gridPos": { "h": 4, "w": 6, "x": 0, "y": 8 },
+      "targets": [
+        { "expr": "lab_up", "refId": "A" }
+      ],
+      "id": 3
+    }
+  ],
+  "schemaVersion": 39,
+  "tags": ["lab", "portfolio"],
+  "templating": { "list": [] },
+  "time": { "from": "now-15m", "to": "now" },
+  "title": "Runnable Lab Overview",
+  "uid": "runnable-lab",
+  "version": 1
+}
