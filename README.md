@@ -6,6 +6,22 @@
 >
 > Hub: https://github.com/qwertqaze102-prog/devops-portfolio-hub
 
+
+## Architecture
+
+```mermaid
+flowchart TB
+  NE[Node Exporter] --> Prom[Prometheus]
+  CAD[cAdvisor] --> Prom
+  Prom --> Graf[Grafana]
+  Prom --> Rules[Alert rules]
+```
+
+```text
+Exporters → Prometheus → Grafana dashboards
+                 ↘ Alert rules (InstanceDown / HighCPU)
+```
+
 Observability lab for portfolio:
 - Prometheus scrapes node-exporter and cAdvisor
 - Grafana with provisioned datasource
@@ -20,3 +36,9 @@ open http://localhost:9090   # Prometheus
 
 ## Skills shown
 metrics, dashboards, alert design, container observability
+
+## Screenshots / how it looks
+
+> Diagrams above show architecture. Run the stack locally and attach UI screenshots here if needed:
+> - `docs/screenshots/` folder (optional)
+> - keep secrets out of screenshots
